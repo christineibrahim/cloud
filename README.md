@@ -8,15 +8,15 @@ http://udagram-chib-app-dev-dev.us-east-1.elasticbeanstalk.com/filteredimage?ima
 Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdGluZSIsInBhc3N3b3JkIjoiUW05YSUyMjMjb3I2IiwiaWF0IjoxNjYyMDY1MTgyfQ.0umjOYMLsiJNRgPxUPaja0pZGb7Rx2WO0C2ccpWVEJY
 
 # AWS Items Used Names:
-Elastic Beanstalk = udagram-chib-app-dev-dev
-Application Name = udagram-chib-app-dev
-AWS S3 bucket = udagram-s3-dev
-IAM = udagram-iam2-dev
-IAM role = udagram_role_dev
-IAM user group = udagram-grp-dev
-IAM policy = udagram_policy_s3_dev
+1- Elastic Beanstalk = udagram-chib-app-dev-dev
+2- Application Name = udagram-chib-app-dev
+3- AWS S3 bucket = udagram-s3-dev
+4- IAM = udagram-iam2-dev
+5- IAM role = udagram_role_dev
+6- IAM user group = udagram-grp-dev
+7- IAM policy = udagram_policy_s3_dev
 
-Test Image in S3 bucket = kitten-report.jpg
+8- Test Image in S3 bucket = kitten-report.jpg
 
 ## Udagram Image Filtering Microservice Project includs:
 	
