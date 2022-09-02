@@ -1,4 +1,5 @@
 import express from 'express';
+import { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 import * as AWS from './aws';
@@ -32,8 +33,8 @@ import { requireAuth,  requestToken} from './auth';
 
   /**************************************************************************** */
   app.get( "/filteredimage", 
-    async (req, res) => {
-      let image_url = req.query.image_url;
+    async (req: Request, res: Response) => {
+      let image_url:string = req.query.image_url;
     
       //    1. validate the image_url query
       if (!image_url) {
@@ -56,25 +57,25 @@ import { requireAuth,  requestToken} from './auth';
   // Root Endpoint
   // Get same as filteredimage but with requireAuth
   app.get( "/filteredimagewithauth", requireAuth,
-    async (req, res) => {
+    async (req: Request, res: Response) => {
       res.redirect('filteredimage?image_url='+req.query.image_url)
   });
   
   // Root Endpoint
   // Get static token to simulate requireAuth
-  app.get( "/gettoken", async ( req, res ) => {
+  app.get( "/gettoken", async ( req: Request, res: Response ) => {
     res.send(requestToken())
   } );
 
   // Root Endpoint
   // Get static token to simulate requireAuth
-  app.get( "/checkstaticheadertoken", requireAuth, async ( req, res ) => {
+  app.get( "/checkstaticheadertoken", requireAuth, async ( req: Request, res: Response ) => {
     res.send('done!!')
   } );
 
   // Root Endpoint
   // Displays a simple message to the user
-  app.get( "/", async ( req, res ) => {
+  app.get( "/", async ( req: Request, res: Response) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
 
